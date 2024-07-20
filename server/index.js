@@ -9,7 +9,7 @@ app.get('*', (req, res)=>{
     res.sendFile(path.join(__dirname, '../build/index.html'));
 });
 
-
+app.use( express.static( `${__dirname}/../build` ) );
 app.use(express.json())
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
