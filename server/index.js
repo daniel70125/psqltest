@@ -1,7 +1,14 @@
 const express = require("express");
 const app = express();
 
-const merchant_model = require('./merchant_model')
+const merchant_model = require('./merchant_model');
+
+const path = require('path'); // Usually moved to the start of file
+
+app.get('*', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../build/index.html'));
+});
+
 
 app.use(express.json())
 app.use(function (req, res, next) {
