@@ -1,6 +1,7 @@
 {
   "name": "psqltest",
   "version": "0.1.0",
+  "homepage": "/",
   "proxy": "http://localhost:4000/",
   "private": true,
   "dependencies": {
